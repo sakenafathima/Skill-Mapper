@@ -1,0 +1,139 @@
+<html>
+<head>
+<title>Registration and Login</title>
+</head>
+<style>
+body{
+background-image:url(bimg.jpg);
+background-position:center;
+background-size:cover;
+}
+.form-box{
+width:350px;
+height:500px;
+position:absolute;
+background:rgba(0,0,0,0.5);
+top:100px;
+left:500px;
+overflow:hidden;
+}
+.button-box{
+width:200px;
+margin:35px auto;
+position:relative:
+box-shadow:0 0 20px 9px #ff61241f;
+border-radius:30px;
+}
+.toggle-btn{
+padding:10px 20px;
+cursor:pointer;
+background:transparent;
+border:0;
+outline:none;
+position:relative;
+display:inline;
+}
+#btn{
+top:38px;
+left:50px;
+position:absolute;
+width:100px;
+height:28px;
+background:linear-gradient(to right,red,yellow);
+border-radius:25px;
+transition:.3s;
+}
+.input-group{
+top:100px;
+left:530px;
+position:absolute;
+width:280px;
+transition:.3s;
+}
+.input-field{
+width:260px;
+padding:10px 0;
+margin:5px 0;
+border-left:0;
+border-top:0;
+border-right:0; 
+border-bottom:1px solid #fffff ;
+outline:none;
+background:transparent;
+}
+.submit-btn{
+width:100px;
+padding:10px 30px;
+display:block;
+margin:auto;
+background:linear-gradient(to right,#ff1493,#ff4500);
+border:0;
+outline:none;
+border-radius:30px;
+}
+.check-box{
+margin:30px 10px 30px 0;
+}
+span{
+color:gray;
+font-size:13 px;
+bottom:65px;
+position:absolute;
+}
+.login{
+left:50px;
+}
+.register{
+left:450px;
+}
+</style>
+<body>
+	<div class="form-box">
+		<div class="button-box">
+		<div id="btn">
+		</div>
+		<button type="button" class="toggle-btn" onclick="login()">Login</button>
+		<button type="button" class="toggle-btn" onclick="register()">Register</button>
+		
+		</div>
+	<form id="login" class="input-group" action="LoginServlet" method="post">
+	<input type="text" class="input-field" name="Username" placeholder="Username" required>
+	<input type="password" class="input-field" name="Password" placeholder="Password" required>
+	<input type="checkbox" class="check-box"><span>Remember Password</span> 
+	<button type="submit" class="submit-btn">Login</button>
+	</form> 	 
+	<form id="register" class="input-group">
+	<input type="text" class="input-field" placeholder="Name" required>
+	<input type="email" class="input-field" placeholder="Email" required>
+	<input type="number" class="input-field" placeholder="Contact number" required>
+	<input type="date" id="date" name="date" Placeholder="Date Of Birth" required><br/><br/>
+	<input type="radio"name="ur gen"value="male">Male
+	<input type="radio"name="ur gen"value="female">Female
+	<input type="radio"name="ur gen"value="custom">Others
+	<input type="password" class="input-field" placeholder="Password" required>
+	<input type="password" class="input-field" placeholder="Confirm Password" required>
+	<input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span> 
+	<button type="submit" class="submit-btn"> Register</button>
+	</form>  
+</div>	
+<script>
+var x=document.getElementById("login");
+var y=document.getElementById("register");
+var z=document.getElementById("btn");
+
+x.style.left="50px";
+y.style.left="450px";
+z.style.left="50px";
+function register(){
+x.style.left="400px";
+y.style.left="50px";
+z.style.left="160px";
+}
+function login(){
+x.style.left="50px";
+y.style.left="450px";
+z.style.left="50px";
+}
+</script>
+</body>
+</html>		
